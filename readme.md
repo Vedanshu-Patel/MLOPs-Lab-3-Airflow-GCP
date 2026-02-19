@@ -17,7 +17,7 @@ The DAG (`Airflow_Lab3_new2`) chains these tasks together and passes data betwee
 
 ## Step-by-Step Guide: Deploying and Triggering Airflow DAGs (Standalone Mode)
 
-This guide covers setting up Apache Airflow in **standalone mode** on a virtual machine. Standalone mode runs the webserver, scheduler, and triggerer in a single process—ideal for development and small deployments.
+This guide covers setting up Apache Airflow in **standalone mode** on a virtual machine. Standalone mode runs the webserver, scheduler, and triggerer in a single process.
 
 ### 1. Create and Configure a VM
 
