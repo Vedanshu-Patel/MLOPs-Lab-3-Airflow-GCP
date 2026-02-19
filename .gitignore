@@ -1,0 +1,5 @@
+# Virtual Environment
+airflow_new_venv/
+
+# Model artifacts
+dags/model/
