@@ -79,9 +79,23 @@ On first run, Airflow will:
 - Create an admin user
 - Print the **username** and **password** in the terminal—save these for logging in
 - If not printed there it will be in a file named simple_auth_manager_passwords. use the below command to get it.
-- cat ~/airflow/simple_auth_manager_passwords.json.generated
+```bash
+cat ~/airflow/simple_auth_manager_passwords.json.generated
+```
 
 The Airflow web interface will be accessible at `http://<VM-IP>:8080`. Log in with the credentials printed in the terminal.
+
+
+### 6. Create an Airflow Admin User (Optional)
+To authenticate with the API, create a user:
+```bash
+airflow users create \
+  --username yourusername \
+  --firstname yourname \
+  --lastname yourname \
+  --role Admin \
+  --email youremail
+```
 
 ---
 
