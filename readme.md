@@ -55,9 +55,11 @@ sudo apt install python3-pip python3-venv python3-full -y
 3. **Install Apache Airflow**:
    ```bash
    pip install apache-airflow
-   ```
+   
 4. Initialize the Airflow Database:
+   ```bash
    airflow db migrate
+   ```
 ---
 
 ### 4. Start Airflow in Standalone Mode
