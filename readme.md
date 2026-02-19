@@ -102,18 +102,6 @@ To start Airflow, open two separate terminals and activate the virtual environme
 
 The Airflow web interface will be accessible at `http://<VM-IP>:8080`. Log in with the credentials printed in the terminal.
 
-
-### 6. Create an Airflow Admin User (Optional)
-To authenticate with the API, create a user:
-```bash
-airflow users create \
-  --username yourusername \
-  --firstname yourname \
-  --lastname yourname \
-  --role Admin \
-  --email youremail
-```
-
 ---
 
 ### 5. Enable the Airflow API (Optional)
@@ -131,9 +119,21 @@ To enable the Airflow API for programmatic access, configure the `airflow.cfg` f
    auth_backend = airflow.api.auth.backend.basic_auth
    ```
 
+
+### 6. Create an Airflow Admin User (Optional)
+To authenticate with the API, create a user:
+```bash
+airflow users create \
+  --username yourusername \
+  --firstname yourname \
+  --lastname yourname \
+  --role Admin \
+  --email youremail
+```
+
 ---
 
-### 6. Set Up Folder Structure for Airflow Project
+### 7. Set Up Folder Structure for Airflow Project
 
 1. In your Airflow directory, create folders for DAGs and requirements:
    ```bash
@@ -162,7 +162,7 @@ To enable the Airflow API for programmatic access, configure the `airflow.cfg` f
 
 ---
 
-### 7. Configure Email (SMTP) for Notifications
+### 8. Configure Email (SMTP) for Notifications
 
 The DAG sends a success email when the pipeline completes. The `success_email.py` task uses an Airflow connection for credentials. Configure email **before** triggering the DAG.
 
@@ -211,7 +211,7 @@ smtp_retry_limit = 5
 
 ---
 
-### 8. Create and Edit DAG Files
+### 9. Create and Edit DAG Files
 
 1. **Define DAG**:
    Create and edit the `my_dag.py` DAG file:
@@ -229,7 +229,7 @@ smtp_retry_limit = 5
 
 ---
 
-### 9. Install Requirements
+### 10. Install Requirements
 
 If you have any specific Python packages listed in `requirements.txt`, install them with:
 
@@ -239,7 +239,7 @@ pip install -r requirements.txt
 
 ---
 
-### 10. Trigger the DAG
+### 11. Trigger the DAG
 
 1. **Activate the Virtual Environment**:
    ```bash
@@ -255,7 +255,7 @@ You should see logs confirming that the DAG has been triggered. You can also mon
 
 ---
 
-### 11. Run and Test the DAG Locally
+### 12. Run and Test the DAG Locally
 
 To test `model_development.py` directly (without Airflow):
 
