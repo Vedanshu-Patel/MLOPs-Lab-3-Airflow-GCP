@@ -85,6 +85,21 @@ On first run, Airflow will:
 cat ~/airflow/simple_auth_manager_passwords.json.generated
 ```
 
+### 4. Start the Airflow Webserver and Scheduler (Optional)
+To start Airflow, open two separate terminals and activate the virtual environment in each:
+
+1. **Terminal 1**: Start the Webserver
+   ```bash
+   source airflow_new_venv/bin/activate
+   airflow api-server --port 8080
+   ```
+
+2. **Terminal 2**: Start the Scheduler
+   ```bash
+   source airflow_new_venv/bin/activate
+   airflow scheduler
+   ```
+
 The Airflow web interface will be accessible at `http://<VM-IP>:8080`. Log in with the credentials printed in the terminal.
 
 
